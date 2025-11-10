@@ -1,0 +1,151 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color:#FFC0CB;
+    background-image: radial-gradient(circle, #D5006D 30%, transparent 30%), 
+    radial-gradient(circle, #D5006D 30%, transparent 30%);
+background-size: 100px 100px; 
+background-position: 0 0, 50px 50px;
+}
+
+#noButton {
+    position: absolute;
+    margin-left: 150px;
+    transition: 0.5s;
+}
+
+#yesButton {
+    position: absolute;
+    margin-right: 150px;
+}
+#ifButton {
+    position: absolute; 
+    bottom: 10px; 
+    right: 10px; 
+    padding: 3px 5px; 
+    font-size: 8px;
+    border-radius: 4px; 
+}
+
+
+.header_text {
+    font-family: 'Nunito';
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+    text-shadow: 
+        -1px -1px 0 black,  
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+         border: 2px solid black; 
+         padding: 10px;
+         border-radius: 8px;
+         background-color: #FFC0CB;
+         
+}
+
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.btn {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.gif_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 320px) and (max-height: 568px) {
+    body {
+        height: 100vh;
+    }
+
+    .header_text {
+        font-size: 20px;
+    }
+
+    img {
+        height: 60vh;
+    }
+
+    .btn {
+        padding: 10px 18px;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 414px) and (max-height: 736px) {
+    body {
+        height: 90vh;
+    }
+
+    .header_text {
+        font-size: 28px;
+    }
+
+    img {
+        height: 60vh;
+    }
+
+    .btn {
+        padding: 15px 25px;
+        font-size: 14px;
+    }
+}
+/* --- Make the image smaller and cuter --- */
+.gif_container img {
+    width: 220px; /* smaller image */
+    height: auto;
+    border-radius: 15px;
+    border: 3px solid white;
+    box-shadow: 0 0 10px white;
+    margin-top: 15px;
+}
+
+/* --- White hearts in the corners --- */
+.heart {
+    position: fixed;
+    font-size: 2.5rem;
+    color: white;
+    opacity: 0.8;
+    z-index: 10;
+    pointer-events: none;
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Positions */
+.heart.top-left { top: 15px; left: 15px; animation-delay: 0s; }
+.heart.top-right { top: 15px; right: 15px; animation-delay: 1s; }
+.heart.bottom-left { bottom: 15px; left: 15px; animation-delay: 2s; }
+.heart.bottom-right { bottom: 15px; right: 15px; animation-delay: 3s; }
+
+/* Gentle floating animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
